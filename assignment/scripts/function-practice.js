@@ -39,20 +39,19 @@ console.log('The first three numbers multiplied together equals:', multiplyThree
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
-let number = -3
+let number;
 function isPositive(number){
   if (number > 0){
     return true;
   }
-  else (number < 0);
+  else (number <= 0);
     return false;
   }
-console.log(isPositive(number))
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( 'Because the number "3" is positive, the following answer should say "true":', isPositive(3) );
+console.log( 'Because "0" is neither positive or negative, the following answer should say "false":', isPositive(0) );
+console.log( 'Beacause "-3" is negative, the following answer should say "false":', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
