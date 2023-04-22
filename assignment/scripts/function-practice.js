@@ -9,7 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('Test - should say "Hello World!":', hello());
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
@@ -47,26 +47,40 @@ function isPositive(number){
   else (number <= 0);
     return false;
   }
-// Call the function to test each outcome (true & false) 
+
+  // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'Because the number "3" is positive, the following answer should say "true":', isPositive(3) );
 console.log( 'Because "0" is neither positive or negative, the following answer should say "false":', isPositive(0) );
 console.log( 'Beacause "-3" is negative, the following answer should say "false":', isPositive(-3) );
 
-
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
-
+let toyArray = ['Buzz Lightyear', 'Woody', 'Bullseye', 'Green Army Men'];
+function getLast( toyArray ) {
+  if (toyArray.length < 0){
+    return 'undefined';
+  }
+  else (toyArray.length >= 0);
+    return toyArray.pop();
 }
+console.log('The coolest characters in Toy Story were the last ones:', getLast(toyArray));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+let numberArray = [1, 2, 3, 4, 5];
+let value = 3;
+function find( value, numberArray ){
+  for (let i=0; i<=4; i++){
+    if (value === i){
+      console.log('true');
+    }
+    else console.log('false');
+  }
+  return find(value, numberArray);
 }
-
+console.log(find(value, numberArray));
 // ----------------------
 // Stretch Goals
 // ----------------------
