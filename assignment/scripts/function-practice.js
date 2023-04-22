@@ -69,18 +69,16 @@ console.log('The coolest characters in Toy Story were the last ones:', getLast(t
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-let numberArray = [1, 2, 3, 4, 5];
-let value = 3;
-function find( value, numberArray ){
-  for (let i=0; i<=4; i++){
-    if (value === i){
-      console.log('true');
+function find( value, array ){
+  for (i=0; i<array.length; i++){
+    if (array[i] === value){
+      return true;
     }
-    else console.log('false');
   }
-  return find(value, numberArray);
+  return false;
 }
-console.log(find(value, numberArray));
+console.log('Test - This answer should be true:', (find(2,[1,2,3])));
+console.log('Test - This answer should be false:', (find(5,[1,2,3])));
 // ----------------------
 // Stretch Goals
 // ----------------------
