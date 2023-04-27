@@ -14,11 +14,14 @@ console.log('Test - should say "Hello World!":', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName(  ) {
-  return 'Hello, Instructor!';
+
+function helloName(name) {
+  return 'Hello, ' + name + '!';
 }
+
 // Remember to call the function to test
-console.log(helloName());
+console.log(helloName('Instructor'));
+console.log(helloName('Liz'));
 
 // 3. Function to add two numbers together & return the result
 let firstNumber = 1;
@@ -57,12 +60,13 @@ console.log( 'Beacause "-3" is negative, the following answer should say "false"
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 let toyArray = ['Buzz Lightyear', 'Woody', 'Bullseye', 'Green Army Men'];
-function getLast( toyArray ) {
-  if (toyArray.length < 0){
-    return 'undefined';
+function getLast(toyArray) {
+  if (toyArray.length === 0) {
+    return undefined;
   }
-  else (toyArray.length >= 0);
-    return toyArray.pop();
+  else {
+    return toyArray[toyArray.length - 1];
+  }
 }
 console.log('The coolest characters in Toy Story were the last ones:', getLast(toyArray));
 
